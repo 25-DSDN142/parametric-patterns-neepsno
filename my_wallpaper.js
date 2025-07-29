@@ -10,8 +10,8 @@ let footSizey = 15; //10
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
@@ -31,24 +31,33 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
   drawBody();
 
+  drawBeak();
+  
+  Fluffy();
+
   drawFoot();
 
   drawFin();
 
   drawEye();
 
-  Fishy(170, 120);
+  Fishy(160, 120);
 }
 
-function drawBody(x, y){
+function drawBody(){
   fill(50, 55, 100);
   noStroke();
   rect(30, 75, bodySizex, bodySizey, 15, 15, 5, 5);
-// beak
+}
+
+function drawBeak(){
   fill(255, 200, 85);
   triangle(115, 105, 125, 110, 115, 115);
   triangle(115, 105, 120, 118, 115, 118);
-  // fluffy
+  
+}
+
+function Fluffy(){
   fill(255);
   rect(30, 115, 85, 30, 15, 15, 5, 5);
   rect(85, 85, 30, 50, 15, 15, 5, 5)
