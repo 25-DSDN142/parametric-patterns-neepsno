@@ -1,6 +1,12 @@
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 30;
+let bodySizex = 85; //65
+let bodySizey = 70; //50
+let footSizex = 30; //20
+let footSizey = 15; //10
+
+
+
+
 
 
 function setup_wallpaper(pWallpaper) {
@@ -17,9 +23,60 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  background(200, 250, 255); //light honeydew green colour
+  
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  rect(40 ,40, rect_width, rect_height);
+  
+  drawBody();
+
+  drawFoot();
+
+  drawFin();
+
+  drawEye();
+
+  Fishy(170, 120);
+}
+
+function drawBody(x, y){
+  fill(50, 55, 100);
+  noStroke();
+  rect(30, 75, bodySizex, bodySizey, 15, 15, 5, 5);
+// beak
+  fill(255, 200, 85);
+  triangle(115, 105, 125, 110, 115, 115);
+  triangle(115, 105, 120, 118, 115, 118);
+  // fluffy
+  fill(255);
+  rect(30, 115, 85, 30, 15, 15, 5, 5);
+  rect(85, 85, 30, 50, 15, 15, 5, 5)
+
+}
+
+function drawFoot(){
+  fill(255, 200, 85)
+  ellipse(25, 140, footSizex, footSizey);
+}
+
+
+function drawFin(){
+  fill(50, 55, 100);
+ellipse(78, 130, 20, 50);
+}
+
+function drawEye(){
+  fill(0, 0, 0)
+  ellipse(105, 100, 10)
+}
+
+function Fishy(x, y){ //x = 170, y = 120
+  fill(120, 190, 200);
+  ellipse(x, y, 30, 10); 
+  triangle(x - 25, y - 10, x - 15, y, x - 25, y + 10);
+
+  fill(0, 0, 0);
+  ellipse(x + 10, y, 2);
+ 
 }
