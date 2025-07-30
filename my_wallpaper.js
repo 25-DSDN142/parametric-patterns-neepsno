@@ -1,11 +1,14 @@
 //your parameter variables go here!
-let bodySizex = 85; //65
-let bodySizey = 70; //50
-let footSizex = 30; //20
-let footSizey = 15; //10
+let bodySizex = 95; //65
+let bodySizey = 80; //50
+let footSizex = 40; //20
+let footSizey = 25; //10
 
+let penguinx = 30
+let penguiny = 60
 
-
+let fishx = 170;
+let fishy = 100;
 
 
 
@@ -14,7 +17,7 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -23,69 +26,86 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(200, 250, 255); //light honeydew green colour
+  background(200, 250, 255); //light icy blue colour
   
 }
+
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
-  drawBody();
 
-  drawBeak();
+  drawBody(penguinx, penguiny);
+
+  drawBeak(penguinx, penguiny);
   
-  Fluffy();
+  Fluffy(penguinx, penguiny);
 
-  drawFoot();
+  drawFoot(penguinx, penguiny);
 
-  drawFin();
+  drawFin(penguinx, penguiny);
 
-  drawEye();
+  drawEye(penguinx, penguiny);
+ 
+  if(penguinx > 50){
 
-  Fishy(160, 120);
+Fishy(fishx - 130, fishy)
+
+}
+else{
+  Fishy(fishx, fishy)
 }
 
-function drawBody(){
+}
+
+
+function drawBody(penguinx, penguiny){ // x = 30, y = 75
   fill(50, 55, 100);
   noStroke();
-  rect(30, 75, bodySizex, bodySizey, 15, 15, 5, 5);
+  rect(penguinx, penguiny, bodySizex, bodySizey, 15, 15, 5, 5);
 }
 
-function drawBeak(){
+function drawBeak(penguinx, penguiny){
   fill(255, 200, 85);
-  triangle(115, 105, 125, 110, 115, 115);
-  triangle(115, 105, 120, 118, 115, 118);
+  triangle(penguinx + 85, penguiny + 30, penguinx + 95, penguiny + 35, penguinx + 85, penguiny + 40);
+  triangle(penguinx + 85, penguiny + 30, penguinx + 90, penguiny + 43, penguinx + 85, penguiny + 43);
   
 }
 
-function Fluffy(){
+function Fluffy(penguinx, penguiny){
   fill(255);
-  rect(30, 115, 85, 30, 15, 15, 5, 5);
-  rect(85, 85, 30, 50, 15, 15, 5, 5)
+  rect(penguinx, penguiny + 40, bodySizex, bodySizey - 40, 15, 15, 5, 5);
+  rect(penguinx + 55, penguiny + 10, 30, 50, 15, 15, 5, 5)
 
 }
 
-function drawFoot(){
+function drawFoot(penguinx, penguiny){
   fill(255, 200, 85)
-  ellipse(25, 140, footSizex, footSizey);
+  ellipse(penguinx - 5, penguiny + 65, footSizex, footSizey);
 }
 
 
-function drawFin(){
+function drawFin(penguinx, penguiny){
   fill(50, 55, 100);
-ellipse(78, 130, 20, 50);
+ellipse(penguinx + 48, penguiny + 55, 20, 50);
 }
 
-function drawEye(){
+function drawEye(penguinx, penguiny){
   fill(0, 0, 0)
-  ellipse(105, 100, 10)
+  ellipse(penguinx + 75, penguiny + 25, 10)
 }
 
-function Fishy(x, y){ //x = 170, y = 120
+function Fishy(fishx, fishy){ //x = 170, y = 120
   fill(120, 190, 200);
-  ellipse(x, y, 30, 10); 
-  triangle(x - 25, y - 10, x - 15, y, x - 25, y + 10);
+  noStroke()
+  ellipse(fishx, fishy, 30, 10); 
+  triangle(fishx - 25, fishy - 10, fishx - 15, fishy, fishx - 25, fishy + 10);
 
   fill(0, 0, 0);
-  ellipse(x + 10, y, 2);
+  ellipse(fishx + 10, fishy, 2);
  
+
 }
+
+
+
+
