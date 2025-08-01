@@ -1,16 +1,17 @@
 //your parameter variables go here!
-let bodySizex = 95; //65
-let bodySizey = 80; //50
-let footSizex = 40; //20
-let footSizey = 25; //10
+let penguinx = 30; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
-let penguinx = 30
-let penguiny = 60
+let fishx = 180;
+let fishy = 50;
+let fishColour = [36, 42, 237]
 
-let fishx = 170;
-let fishy = 100;
-
-
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+let penguinColour = [255, 54, 54]
+let feetColour = [255, 228, 94]
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -21,12 +22,12 @@ function setup_wallpaper(pWallpaper) {
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 200;
 }
 
 function wallpaper_background() {
-  background(200, 250, 255); //light icy blue colour
+  background(36, 237, 70); //light icy blue colour
   
 }
 
@@ -34,68 +35,47 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
 
-  drawBody(penguinx, penguiny);
-
-  drawBeak(penguinx, penguiny);
-  
-  Fluffy(penguinx, penguiny);
-
-  drawFoot(penguinx, penguiny);
-
-  drawFin(penguinx, penguiny);
-
-  drawEye(penguinx, penguiny);
+  drawPenguin(penguinx, penguiny);
  
   if(penguinx > 50){
 
-Fishy(fishx - 130, fishy)
-
+  drawFish(fishx - 150, fishy);
 }
 else{
-  Fishy(fishx, fishy)
+  drawFish(fishx, fishy)
 }
 
 }
 
 
-function drawBody(penguinx, penguiny){ // x = 30, y = 75
-  fill(50, 55, 100);
+function drawPenguin(penguinx, penguiny){ // x = 30, y = 75
+  fill(penguinColour);
   noStroke();
   rect(penguinx, penguiny, bodySizex, bodySizey, 15, 15, 5, 5);
-}
 
-function drawBeak(penguinx, penguiny){
-  fill(255, 200, 85);
-  triangle(penguinx + 85, penguiny + 30, penguinx + 95, penguiny + 35, penguinx + 85, penguiny + 40);
-  triangle(penguinx + 85, penguiny + 30, penguinx + 90, penguiny + 43, penguinx + 85, penguiny + 43);
+// beak
+  fill(feetColour);
+  triangle(bodySizex + penguinx, bodySizey + penguiny - 30, bodySizex + penguinx + 10, bodySizey + penguiny - 35, bodySizex + penguinx, bodySizey + penguiny - 40);
+  triangle(bodySizex + penguinx, bodySizey + penguiny - 28, bodySizex + penguinx + 5, bodySizey + penguiny - 27, bodySizex + penguinx, bodySizey + penguiny - 37);
   
-}
-
-function Fluffy(penguinx, penguiny){
+//fluffy white bit
   fill(255);
   rect(penguinx, penguiny + 40, bodySizex, bodySizey - 40, 15, 15, 5, 5);
-  rect(penguinx + 55, penguiny + 10, 30, 50, 15, 15, 5, 5)
+  rect(penguinx + 55, penguiny + 10, bodySizex - 55, bodySizey - 10, 15, 15, 5, 5)
 
-}
-
-function drawFoot(penguinx, penguiny){
-  fill(255, 200, 85)
-  ellipse(penguinx - 5, penguiny + 65, footSizex, footSizey);
-}
-
-
-function drawFin(penguinx, penguiny){
-  fill(50, 55, 100);
-ellipse(penguinx + 48, penguiny + 55, 20, 50);
-}
-
-function drawEye(penguinx, penguiny){
+//foot
+  fill(feetColour)
+  ellipse(penguinx - 5, bodySizey + 55, bodySizex - 40, bodySizey - 55);
+//fin
+  fill(penguinColour);
+ellipse(penguinx + 40, penguiny + 40, bodySizex - 65, bodySizey - 20);
+//eye
   fill(0, 0, 0)
-  ellipse(penguinx + 75, penguiny + 25, 10)
+  ellipse(penguinx + bodySizex - 15, penguiny + 25, 10)
 }
 
-function Fishy(fishx, fishy){ //x = 170, y = 120
-  fill(120, 190, 200);
+function drawFish(fishx, fishy){ //x = 170, y = 120
+  fill(fishColour);
   noStroke()
   ellipse(fishx, fishy, 30, 10); 
   triangle(fishx - 25, fishy - 10, fishx - 15, fishy, fishx - 25, fishy + 10);
