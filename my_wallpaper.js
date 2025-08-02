@@ -1,36 +1,36 @@
 //your parameter variables go here!
-let penguinx = 80; // 30 or 80
+let penguinx = 30; // 30 or 80
 let penguiny = 60; //60
-//chase the fish! or let the fish chase you;p
+//chase the fish! or let the fish chase you;p 
 
 let fishx = 180;
 let fishy = 100;
-let fishColour = [105, 36, 242]
+let fishColour = [120, 190, 200]
 
 let bodySizex = 85; // between 75 - 95
 let bodySizey = 70; //between 60 - 80  
 // keep bodySizex and bodySizey 15 apart
 
-let penguinColour = [73, 35, 148] 
-let feetColour = [127, 86, 209] 
+let penguinColour = [50, 55, 100] //dark blue
+let feetColour = [255, 200, 85] //yellow
 
 function setup_wallpaper(pWallpaper) {
-  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 300;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
 }
 
 function wallpaper_background() {
-  background(167, 124, 252); 
+  background(200, 250, 255); //light icy blue colour
   
 }
+
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
@@ -66,7 +66,7 @@ function drawPenguin(penguinx, penguiny){ // x = 30, y = 75
 //foot
   fill(feetColour)
   ellipse(penguinx - 5, bodySizey + 55, bodySizex - 40, bodySizey - 55);
-//fin
+//wing
   fill(penguinColour);
 ellipse(penguinx + 40, penguiny + 40, bodySizex - 65, bodySizey - 20);
 //eye

@@ -26,10 +26,9 @@ let penguinColour = [255, 89, 186] //pink!!!
 let feetColour = [255, 200, 85] //yellow
 
 function setup_wallpaper(pWallpaper) {
-  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -64,10 +63,9 @@ let penguinColour = [50, 55, 100] //dark blue
 let feetColour = [255, 200, 85] //yellow
 
 function setup_wallpaper(pWallpaper) {
-  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -102,10 +100,9 @@ let penguinColour = [255, 54, 54] //red
 let feetColour = [255, 228, 94] //yellow
 
 function setup_wallpaper(pWallpaper) {
-  //pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.output_mode(GRID_WALLPAPER);
   
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_PORTRAIT);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -123,36 +120,222 @@ function wallpaper_background() {
 
 Wallpaper 4:
 
+//your parameter variables go here!
+let penguinx = 80; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
+let fishx = 180;
+let fishy = 95;
+let fishColour = [199, 203, 255]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [112, 119, 212] //dark lavender 
+let feetColour = [200, 203, 255] //lavender
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 50;
+  pWallpaper.grid_settings.row_offset  = 300;
+}
+
+function wallpaper_background() {
+  background(50, 60, 194); 
+  
+}
 
 /////////////////////////////////
 
 Wallpaper 5:
 
+//your parameter variables go here!
+let penguinx = 80; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
+let fishx = 180;
+let fishy = 95;
+let fishColour = [99, 242, 135]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [21, 79, 36] //dark lavender 
+let feetColour = [37, 128, 60] //lavender
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 500;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 600;
+}
+
+function wallpaper_background() {
+  background(50, 168, 82); 
+  
+}
 
 /////////////////////////////////
 
 Wallpaper 6:
 
+//your parameter variables go here!
+let penguinx = 30; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
+let fishx = 180;
+let fishy = 95;
+let fishColour = [255]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [54, 52, 46] 
+let feetColour = [145, 142, 124] 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 300;
+}
+
+function wallpaper_background() {
+  background(92, 89, 74); 
+  
+}
 
 /////////////////////////////////
 
 Wallpaper 7:
 
+//your parameter variables go here!
+let penguinx = 30; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
+let fishx = 180;
+let fishy = 95;
+let fishColour = [122, 133, 57]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [92, 99, 49] 
+let feetColour = [142, 153, 72] 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 300;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+function wallpaper_background() {
+  background(232, 250, 127); 
+  
+}
 
 /////////////////////////////////
 
 Wallpaper 8:
 
+//your parameter variables go here!
+let penguinx = 30; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
+let fishx = 80;
+let fishy = 30;
+let fishColour = [255]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [212, 118, 36] 
+let feetColour = [250, 148, 60] 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+function wallpaper_background() {
+  background(255, 194, 110); 
+  
+}
 
 /////////////////////////////////
 
 Wallpaper 9:
 
+//your parameter variables go here!
+let penguinx = 80; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p
 
+let fishx = 180;
+let fishy = 100;
+let fishColour = [105, 36, 242]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [73, 35, 148] 
+let feetColour = [127, 86, 209] 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+function wallpaper_background() {
+  background(167, 124, 252); 
+  
+}
 
 /////////////////////////////////
