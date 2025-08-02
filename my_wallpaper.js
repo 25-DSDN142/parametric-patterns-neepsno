@@ -1,17 +1,18 @@
 //your parameter variables go here!
-let penguinx = 30; // 30 or 80
+let penguinx = 80; // 30 or 80
 let penguiny = 60; //60
 //chase the fish! or let the fish chase you;p
 
 let fishx = 180;
-let fishy = 50;
-let fishColour = [36, 42, 237]
+let fishy = 100;
+let fishColour = [105, 36, 242]
 
 let bodySizex = 85; // between 75 - 95
 let bodySizey = 70; //between 60 - 80  
 // keep bodySizex and bodySizey 15 apart
-let penguinColour = [255, 54, 54]
-let feetColour = [255, 228, 94]
+
+let penguinColour = [73, 35, 148] 
+let feetColour = [127, 86, 209] 
 
 function setup_wallpaper(pWallpaper) {
   //pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -21,16 +22,15 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_width  = 300;
   pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 200;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  background(36, 237, 70); //light icy blue colour
+  background(167, 124, 252); 
   
 }
-
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   
