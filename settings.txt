@@ -16,43 +16,6 @@ let penguiny = 60; //60
 
 let fishx = 180;
 let fishy = 100;
-let fishColour = [255, 54, 174]
-
-let bodySizex = 85; // between 75 - 95
-let bodySizey = 70; //between 60 - 80  
-// keep bodySizex and bodySizey 15 apart
-
-let penguinColour = [255, 89, 186] //pink!!!
-let feetColour = [255, 200, 85] //yellow
-
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  
-  pWallpaper.resolution(NINE_PORTRAIT);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
-
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 300;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 150;
-}
-
-function wallpaper_background() {
-  background(210, 174, 245); 
-  
-}
-
-/////////////////////////////////
-
-Wallpaper 2:
-
-//your parameter variables go here!
-let penguinx = 30; // 30 or 80
-let penguiny = 60; //60
-//chase the fish! or let the fish chase you;p 
-
-let fishx = 180;
-let fishy = 100;
 let fishColour = [120, 190, 200]
 
 let bodySizex = 85; // between 75 - 95
@@ -76,6 +39,43 @@ function setup_wallpaper(pWallpaper) {
 
 function wallpaper_background() {
   background(200, 250, 255); //light icy blue colour
+  
+}
+
+/////////////////////////////////
+
+Wallpaper 2:
+
+//your parameter variables go here!
+let penguinx = 30; // 30 or 80
+let penguiny = 60; //60
+//chase the fish! or let the fish chase you;p 
+
+let fishx = 180;
+let fishy = 100;
+let fishColour = [255, 54, 174]
+
+let bodySizex = 85; // between 75 - 95
+let bodySizey = 70; //between 60 - 80  
+// keep bodySizex and bodySizey 15 apart
+
+let penguinColour = [255, 89, 186] //pink!!!
+let feetColour = [255, 200, 85] //yellow
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 300;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 150;
+}
+
+function wallpaper_background() {
+  background(210, 174, 245); 
   
 }
 
@@ -170,8 +170,8 @@ let bodySizex = 85; // between 75 - 95
 let bodySizey = 70; //between 60 - 80  
 // keep bodySizex and bodySizey 15 apart
 
-let penguinColour = [21, 79, 36] //dark lavender 
-let feetColour = [37, 128, 60] //lavender
+let penguinColour = [21, 79, 36]
+let feetColour = [37, 128, 60] 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -182,7 +182,7 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 500;
   pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 600;
+  pWallpaper.grid_settings.row_offset  = 300;
 }
 
 function wallpaper_background() {
